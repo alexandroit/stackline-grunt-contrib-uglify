@@ -1,7 +1,7 @@
 {
   "name": "@stackline/grunt-contrib-uglify",
   "description": "Minify JavaScript files with UglifyJS",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Grunt Team",
     "url": "https://gruntjs.com/"
