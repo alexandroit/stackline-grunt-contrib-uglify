@@ -1,0 +1,26 @@
+{
+  "repository": "alexandroit/stackline-grunt-contrib-uglify",
+  "packages": [
+    {
+      "name": "@stackline/grunt-contrib-uglify",
+      "path": "README.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "grunt-contrib-uglify",
+        "javascript",
+        "grunt-plugin",
+        "nodejs",
+        "gruntplugin",
+        "maintenance-fork"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/grunt-contrib-uglify/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/grunt-contrib-uglify/-/grunt-contrib-uglify-1.0.0.tgz",
+      "baselineIntegrity": "sha512-WBULbaibmrCKML5xD1tiIQFCGUolHiHQt/xh2gq/MEXM3JEiGcCmDbXAcO5huAtCgMWdC69197vs9RjKG3pwSg==",
+      "expectedSha512": "f854d6332efb20b4b80ccdfe0a24fc199fbdc2cb7ed9ac1be0d59084361e76c248c85d5e615b6c0c2525fa45f16685d94d592528a2abc6b2e4244bf081ea6f64",
+      "tag": "docs-stackline-grunt-contrib-uglify-v1.0.1"
+    }
+  ]
+}
