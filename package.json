@@ -1,7 +1,7 @@
 {
   "name": "@stackline/grunt-contrib-uglify",
   "description": "Minify JavaScript files with UglifyJS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Grunt Team",
     "url": "https://gruntjs.com/"
@@ -33,8 +33,13 @@
     "source-map": "0.6.1"
   },
   "keywords": [
-    "gruntplugin",
     "stackline",
+    "npm-package",
+    "grunt-contrib-uglify",
+    "javascript",
+    "grunt-plugin",
+    "nodejs",
+    "gruntplugin",
     "maintenance-fork"
   ],
   "files": [
@@ -51,7 +56,7 @@
   "bugs": {
     "url": "https://github.com/alexandroit/stackline-grunt-contrib-uglify/issues"
   },
-  "homepage": "https://github.com/alexandroit/stackline-grunt-contrib-uglify#readme",
+  "homepage": "https://alexandro.net/docs/vanilla/grunt-contrib-uglify/",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
