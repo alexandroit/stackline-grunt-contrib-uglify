@@ -1,0 +1,29 @@
+{
+  "uglify-js": "3.19.3",
+  "reason": "Upstream supported semver range resolves to UglifyJS3.19.3; source-map end positions, property names and declaration placement changed. Functional source-map and execution tests additionally validate output semantics.",
+  "refreshed_files": [
+    "sourcemap_functionName.js.fn.map",
+    "mangle.js",
+    "mangleprops_withNameCacheFile2.js",
+    "sourcemap_customRoot.js.map",
+    "source_map_custom_name",
+    "mangleprops_withExceptionsFiles.js",
+    "mangleprops_withExceptAndExceptionsFiles.js",
+    "mangleprops.js",
+    "mangleprops_withExcept.js",
+    "sourcemapin_sources.js.map",
+    "sourcemap_sources.js.map",
+    "sourcemaps_multiple1.js.map",
+    "sourcemaps_multiple2_fnName.js.fn.map",
+    "sourcemap_customUrl.js.map",
+    "sourcemaps_multiple1_fnName.js.fn.map",
+    "uglify_name_cache.json",
+    "mangleprops_withRegex.js",
+    "sourcemapin_customUrl.js.map",
+    "mangleprops_withNameCacheFile1.js",
+    "sourcemap_basic.js.map",
+    "sourcemapin.js.map",
+    "sourcemaps_multiple2.js.map",
+    "deep/directory/location/source_map.js.map"
+  ]
+}

@@ -1,1 +1,1 @@
-var anObject={a:"val","#key2":"val2"};
+var anObject={v:"val","#key2":"val2"};

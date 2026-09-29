@@ -1,1 +1,1 @@
-{"version":3,"file":"sourcemaps_multiple2_fnName.js","sources":["../test/fixtures/src/comments.js"],"names":["foo","bar","baz"],"mappings":"AAGA,SAASA,MACP,OAAO,GAIT,SAASC,MACP,OAAa,EAAND,MAQT,SAASE,MACP,OAAOD,MAAMA"}
+{"version":3,"file":"sourcemaps_multiple2_fnName.js","sources":["../test/fixtures/src/comments.js"],"names":["foo","bar","baz"],"mappings":"AAGA,SAASA,MACP,OAAO,EACT,CAGA,SAASC,MACP,OAAa,EAAND,IAAI,CACb,CAOA,SAASE,MACP,OAAOD,IAAI,EAAEA,IAAI,CACnB"}
