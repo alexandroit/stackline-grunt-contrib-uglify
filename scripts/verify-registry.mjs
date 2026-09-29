@@ -86,7 +86,15 @@ try {
       { packageName: metadata.name, version: metadata.version }
     )
     assert.equal(installed.status, 0, installed.stdout + installed.stderr)
-    assert.doesNotMatch(installed.stdout + installed.stderr, /warn|deprecated|invalid|extraneous/i)
+    const installOutput = installed.stdout + installed.stderr
+    const installWarnings = installOutput.split(/\r?\n/).filter(line => /^npm warn\b/i.test(line))
+    // This parent-only migration does not recursively replace upstream transitive packages.
+    // Keep deprecated transitive versions explicit; invalid peers/engines/integrity stay fatal.
+    for (const warning of installWarnings) {
+      assert.match(warning, /^npm warn deprecated /i, warning)
+      assert(!warning.startsWith(`npm warn deprecated ${metadata.name}@`), 'The maintained package cannot be deprecated')
+    }
+    assert.doesNotMatch(installOutput, /EBADENGINE|ERESOLVE|EINTEGRITY|ELIFECYCLE|invalid:|extraneous:/i)
     const lock = JSON.parse(await readFile(path.join(cwd, 'package-lock.json'), 'utf8'))
     const locked = lock.packages[`node_modules/${key}`]
     assert.equal(locked.version, metadata.version)
@@ -109,7 +117,7 @@ try {
     execFileSync(process.execPath, ['--input-type=module', '-e',
       `const api = await import(${JSON.stringify(key)}); if (!api || !Object.keys(api).length) throw new Error('Empty public API')`
     ], { cwd, stdio: 'pipe' })
-    consumers.push({ kind, spec, locked, vulnerabilities: 0, signatures: signatures.trim(), sbom })
+    consumers.push({ kind, spec, locked, vulnerabilities: 0, installWarnings, dependencyClosureQualification: installWarnings.length ? 'Scoped parent-only migration: inherited transitive deprecations recorded; not an unrestricted Production Dependency Closure Policy pass' : null, signatures: signatures.trim(), sbom })
   }
 } finally {
   await rm(workspace, { recursive: true, force: true })
